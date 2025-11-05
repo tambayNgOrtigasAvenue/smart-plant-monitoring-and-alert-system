@@ -2,503 +2,398 @@
 
 <a id="readme-top"></a>
 
-<!--
-
-\*\*\* Thanks for checking out the Best-README-Template. If you have a suggestion
-
-\*\*\* that would make this better, please fork the repo and create a pull request
-
-\*\*\* or simply open an issue with the tag "enhancement".
-
-\*\*\* Don't forget to give the project a star!
-
-\*\*\* Thanks again! Now go create something AMAZING! :D
-
--->
-
-
-
-
-
-
-
 <!-- PROJECT SHIELDS -->
 
 <!--
-
-\*\*\* I'm using markdown "reference style" links for readability.
-
-\*\*\* Reference links are enclosed in brackets \[ ] instead of parentheses ( ).
-
-\*\*\* See the bottom of this document for the declaration of the reference variables
-
-\*\*\* for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-
-\*\*\* https://www.markdownguide.org/basic-syntax/#reference-style-links
-
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-\[!\[Contributors]\[contributors-shield]]\[contributors-url]
+<!-- Update YOUR_USERNAME and YOUR_REPO_NAME for these to work -->
 
-\[!\[Forks]\[forks-shield]]\[forks-url]
-
-\[!\[Stargazers]\[stars-shield]]\[stars-url]
-
-\[!\[Issues]\[issues-shield]]\[issues-url]
-
-\[!\[project\_license]\[license-shield]]\[license-url]
-
-\[!\[LinkedIn]\[linkedin-shield]]\[linkedin-url]
-
-
-
-
-
-
+[][contributors-url]
+[][forks-url]
+[][stars-url]
+[][issues-url]
+[][license-url]
+[][linkedin-url]
 
 <!-- PROJECT LOGO -->
 
 <br />
-
 <div align="center">
+<h3 align="center">🌿 Smart Plant Monitoring with Alert System 🌿</h3>
 
-&nbsp; <a href="https://github.com/tambayNgOrtigasAvenue/smart-plant-monitoring-and-alert-system">
-
-&nbsp;   <img src="images/logo.png" alt="Logo" width="80" height="80">
-
-&nbsp; </a>
-
-
-
-<h3 align="center">Smart Plant Monitoring with Alert System</h3>
-
-
-
-&nbsp; <p align="center">
-
-&nbsp;   project\_description
-
-&nbsp;   <br />
-
-&nbsp;   <a href=""><strong>Explore the docs »</strong></a>
-
-&nbsp;   <br />
-
-&nbsp;   <br />
-
-&nbsp;   <a href="">View Demo</a>
-
-&nbsp;   \&middot;
-
-&nbsp;   <a href="">Report Bug</a>
-
-&nbsp;   \&middot;
-
-&nbsp;   <a href="">Request Feature</a>
-
-&nbsp; </p>
-
+<p align="center">
+A complete Arduino project that monitors your room's environment and your plant's soil moisture. It provides real-time data on an LCD and uses a bright RGB LED and a buzzer for clear visual and audible alerts.
+<br />
+<a href="#-pin-definitions-and-wiring"><strong>Explore the Wiring »</strong></a>
+<br />
+<br />
+<a href="https://www.google.com/search?q=https://www.tinkercad.com/things/YOUR_PROJECT_ID_HERE">View Demo on Tinkercad</a>
+·
+<a href="https://www.google.com/search?q=https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/issues">Report Bug</a>
+·
+<a href="https://www.google.com/search?q=https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/issues">Request Feature</a>
+</p>
 </div>
-
-
-
-
-
-
 
 <!-- TABLE OF CONTENTS -->
 
 <details>
-
-&nbsp; <summary>Table of Contents</summary>
-
-&nbsp; <ol>
-
-&nbsp;   <li>
-
-&nbsp;     <a href="#about-the-project">About The Project</a>
-
-&nbsp;     <ul>
-
-&nbsp;       <li><a href="#built-with">Built With</a></li>
-
-&nbsp;     </ul>
-
-&nbsp;   </li>
-
-&nbsp;   <li>
-
-&nbsp;     <a href="#getting-started">Getting Started</a>
-
-&nbsp;     <ul>
-
-&nbsp;       <li><a href="#prerequisites">Prerequisites</a></li>
-
-&nbsp;       <li><a href="#installation">Installation</a></li>
-
-&nbsp;     </ul>
-
-&nbsp;   </li>
-
-&nbsp;   <li><a href="#usage">Usage</a></li>
-
-&nbsp;   <li><a href="#roadmap">Roadmap</a></li>
-
-&nbsp;   <li><a href="#contributing">Contributing</a></li>
-
-&nbsp;   <li><a href="#license">License</a></li>
-
-&nbsp;   <li><a href="#contact">Contact</a></li>
-
-&nbsp;   <li><a href="#acknowledgments">Acknowledgments</a></li>
-
-&nbsp; </ol>
-
+<summary>Table of Contents</summary>
+<ol>
+<li>
+<a href="#-about-the-project">About The Project</a>
+<ul>
+<li><a href="#-built-with">Built With</a></li>
+</ul>
+</li>
+<li>
+<a href="#-getting-started">Getting Started</a>
+<ul>
+<li><a href="#-prerequisites">Prerequisites</a></li>
+<li><a href="#-installation--wiring">Installation & Wiring</a></li>
+</ul>
+</li>
+<li><a href="#-usage-calibration">Usage & Calibration</a></li>
+<li><a href="#-troubleshooting">Troubleshooting</a></li>
+<li><a href="#-contributing">Contributing</a></li>
+<li><a href="#-license">License</a></li>
+<li><a href="#-contact">Contact</a></li>
+<li><a href="#-acknowledgments">Acknowledgments</a></li>
+</ol>
 </details>
-
-
-
-
-
-
 
 <!-- ABOUT THE PROJECT -->
 
-\## About The Project
+🌿 About The Project
 
+This project transforms a simple Arduino Uno into an intelligent monitoring station. It's designed to keep your plants healthy by providing a constant stream of data about their environment.
 
+Key features:
 
-\[!\[Product Name Screen Shot]\[product-screenshot]](https://example.com)
+Environment Sensing: Reads ambient room temperature and humidity using a DHT11 sensor.
 
+Soil Monitoring: Uses a capacitive soil moisture sensor to check for dryness. To prevent corrosion, the sensor is only powered on during a reading.
 
+Clear Display: All data is presented on a 16x2 I2C LCD screen.
 
-Here's a blank template to get started. To avoid retyping too much info, do a search and replace with your text editor for the following: `github\_username`, `repo\_name`, `twitter\_handle`, `linkedin\_username`, `email\_client`, `email`, `project\_title`, `project\_description`, `project\_license`
-
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
-
-
-
-\### Built With
-
-
-
-\* \[!\[Next]\[Next.js]]\[Next-url]
-
-\* \[!\[React]\[React.js]]\[React-url]
-
-\* \[!\[Vue]\[Vue.js]]\[Vue-url]
-
-\* \[!\[Angular]\[Angular.io]]\[Angular-url]
-
-\* \[!\[Svelte]\[Svelte.dev]]\[Svelte-url]
-
-\* \[!\[Laravel]\[Laravel.com]]\[Laravel-url]
-
-\* \[!\[Bootstrap]\[Bootstrap.com]]\[Bootstrap-url]
-
-\* \[!\[JQuery]\[JQuery.com]]\[JQuery-url]
-
-
+Alert System: A bright RGB LED and a piezo buzzer provide immediate, color-coded, and audible alerts based on the plant's needs (Too Dry, Normal, Too Wet).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+🛠️ Built With
 
+This project uses the following hardware and software.
 
+Hardware:
 
+🖥️ Arduino Uno
 
+💧 Capacitive Soil Moisture Sensor
 
+🌡️ DHT11 Sensor
+
+📟 16x2 I2C LCD Display
+
+💡 Common Cathode RGB LED
+
+🔊 Piezo Buzzer
+
+Software:
+
+Arduino IDE
+
+Tinkercad (Optional)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
-\## Getting Started
+🚀 Getting Started
+
+Follow these steps to get your monitoring system up and running.
+
+📚 Prerequisites
+
+Before uploading the code, you must install these libraries via the Arduino IDE (Tools > Manage Libraries...):
+
+LiquidCrystal_I2C (by Frank de Brabander)
+
+DHT sensor library (by Adafruit)
+
+Adafruit Unified Sensor (a dependency for the DHT library)
+
+🔌 Installation & Wiring
+
+This project uses the following pin layout. The provided code file (plant_monitor.ino) is already configured for this setup.
+
+Component
+
+Pin
+
+Connected to Arduino
+
+I2C LCD
+
+SDA
+
+A4
 
 
 
-This is an example of how you may give instructions on setting up your project locally.
+SCL
 
-To get a local copy up and running follow these simple example steps.
-
-
-
-\### Prerequisites
+A5
 
 
 
-This is an example of how to list things you need to use the software and how to install them.
+VCC
 
-\* npm
-
-&nbsp; ```sh
-
-&nbsp; npm install npm@latest -g
-
-&nbsp; ```
+5V
 
 
 
-\### Installation
+GND
+
+GND
+
+Soil Sensor
+
+AOUT
+
+A0 (Analog Input)
 
 
 
-1\. Get a free API Key at \[https://example.com](https://example.com)
+VCC
 
-2\. Clone the repo
-
-&nbsp;  ```sh
-
-&nbsp;  git clone https://github.com/github\_username/repo\_name.git
-
-&nbsp;  ```
-
-3\. Install NPM packages
-
-&nbsp;  ```sh
-
-&nbsp;  npm install
-
-&nbsp;  ```
-
-4\. Enter your API in `config.js`
-
-&nbsp;  ```js
-
-&nbsp;  const API\_KEY = 'ENTER YOUR API';
-
-&nbsp;  ```
-
-5\. Change git remote url to avoid accidental pushes to base project
-
-&nbsp;  ```sh
-
-&nbsp;  git remote set-url origin github\_username/repo\_name
-
-&nbsp;  git remote -v # confirm the changes
-
-&nbsp;  ```
+D8 (Digital Output)
 
 
+
+GND
+
+GND
+
+DHT11
+
+Data
+
+A1 (Digital Input)
+
+
+
+VCC
+
+5V
+
+
+
+GND
+
+GND
+
+RGB LED
+
+Red
+
+D9 (PWM)
+
+
+
+Blue
+
+D10 (PWM)
+
+
+
+Green
+
+D11 (PWM)
+
+
+
+Cathode (GND)
+
+GND
+
+Buzzer
+
+Positive (+)
+
+D13
+
+
+
+Negative (-)
+
+GND
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
-
-
 
 <!-- USAGE EXAMPLES -->
 
-\## Usage
+🌡️ Usage & Calibration
+
+This is the most important part of the project.
+
+1. Temperature & Humidity
+
+The DHT11 sensor reads the ambient room temperature (in °C) and humidity (%).
+
+If the sensor is disconnected, the LCD will display DHT11 Error, but the rest of the system will continue to work.
+
+2. Soil Moisture (CRITICAL STEP)
+
+You MUST calibrate your sensor for accuracy:
+
+Upload the plant_monitor.ino code to your Arduino.
+
+Open the Arduino IDE's Serial Monitor (Tools > Serial Monitor) and set the baud rate to 115200.
+
+Find DRY Value: Hold the sensor in the open air. Note the "Soil Raw" value from the Serial Monitor. This is your DRY_VALUE.
+
+Find WET Value: Submerge the sensor's measurement part in a glass of water. Note the "Soil Raw" value. This is your WET_VALUE.
+
+Update these two lines in the code with your new values:
+
+const int DRY_VALUE = 590; // <-- Change this
+const int WET_VALUE = 240; // <-- Change this
 
 
+3. Alerts
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+The system uses the thresholds in the code (DRY_THRESHOLD and WET_THRESHOLD) to change alerts.
 
+Status
 
+Soil %
 
-\_For more examples, please refer to the \[Documentation](https://example.com)\_
+LED Color
 
+Buzzer
 
+"Dry"
+
+< 35%
+
+Red
+
+Beeps (Low Pitch)
+
+"Normal"
+
+35% - 65%
+
+Green
+
+Silent
+
+"Wet"
+
+> 65%
+
+Blue
+
+Beeps (High Pitch)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+💡 Troubleshooting
 
+LCD is blank or shows squares:
 
+Check your SDA (A4) and SCL (A5) connections.
 
+The I2C address might be wrong. The code uses 0x27, which is common. If that fails, try 0x3F.
 
+Soil moisture always reads 100% or 0%:
 
+You must calibrate the DRY_VALUE and WET_VALUE. Your sensor's values are different from the defaults.
 
-<!-- ROADMAP -->
+Ensure the sensor is powered from pin D8 (for VCC) and not the main 5V rail.
 
-\## Roadmap
+DHT11 Error on LCD:
 
+Check your A1 data pin connection.
 
+The sensor may be broken. The system is designed to keep working even if the DHT11 fails.
+
+LED Color is Wrong:
+
+Your RGB LED pins might be in a different order. The code assumes R=9, B=10, G=11. You can swap the wires or change the pin definitions at the top of the code.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
-
-
 
 <!-- CONTRIBUTING -->
 
-\## Contributing
+🤝 Contributing
 
-
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are \*\*greatly appreciated\*\*.
-
-
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-
 Don't forget to give the project a star! Thanks again!
 
+Fork the Project
 
+Create your Feature Branch (git checkout -b feature/AmazingFeature)
 
-1\. Fork the Project
+Commit your Changes (git commit -m 'Add some AmazingFeature')
 
-2\. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+Push to the Branch (git push origin feature/AmazingFeature)
 
-3\. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-
-4\. Push to the Branch (`git push origin feature/AmazingFeature`)
-
-5\. Open a Pull Request
-
-
+Open a Pull Request
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-\### Top contributors:
-
-
-
-<a href="https://github.com/github\_username/repo\_name/graphs/contributors">
-
-&nbsp; <img src="https://contrib.rocks/image?repo=github\_username/repo\_name" alt="contrib.rocks image" />
-
-</a>
-
-
-
-
-
-
 
 <!-- LICENSE -->
 
-\## License
+📝 License
 
-
-
-Distributed under the project\_license. See `LICENSE.txt` for more information.
-
-
+Distributed under the MIT License. See LICENSE.txt for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
-
-
 
 <!-- CONTACT -->
 
-\## Contact
+📧 Contact
 
+Your Name - YOUR_EMAIL@gmail.com
 
-
-Your Name - \[@twitter\_handle](https://twitter.com/twitter\_handle) - email@email\_client.com
-
-
-
-Project Link: \[https://github.com/github\_username/repo\_name](https://github.com/github\_username/repo\_name)
-
-
+Project Link: https://github.com/YOUR_USERNAME/YOUR_REPO_NAME
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
-
-
 
 <!-- ACKNOWLEDGMENTS -->
 
-\## Acknowledgments
+🙏 Acknowledgments
 
+Adafruit (for the DHT-sensor-library)
 
+Frank de Brabander (for the LiquidCrystal_I2C library)
 
-\* \[]()
-
-\* \[]()
-
-\* \[]()
-
-
+Othneil Drew (for this README template)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-
-
-
-
-<!-- MARKDOWN LINKS \& IMAGES -->
+<!-- MARKDOWN LINKS & IMAGES -->
 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-\[contributors-shield]: https://img.shields.io/github/contributors/github\_username/repo\_name.svg?style=for-the-badge
-
-\[contributors-url]: https://github.com/github\_username/repo\_name/graphs/contributors
-
-\[forks-shield]: https://img.shields.io/github/forks/github\_username/repo\_name.svg?style=for-the-badge
-
-\[forks-url]: https://github.com/github\_username/repo\_name/network/members
-
-\[stars-shield]: https://img.shields.io/github/stars/github\_username/repo\_name.svg?style=for-the-badge
-
-\[stars-url]: https://github.com/github\_username/repo\_name/stargazers
-
-\[issues-shield]: https://img.shields.io/github/issues/github\_username/repo\_name.svg?style=for-the-badge
-
-\[issues-url]: https://github.com/github\_username/repo\_name/issues
-
-\[license-shield]: https://img.shields.io/github/license/github\_username/repo\_name.svg?style=for-the-badge
-
-\[license-url]: https://github.com/github\_username/repo\_name/blob/master/LICENSE.txt
-
-\[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge\&logo=linkedin\&colorB=555
-
-\[linkedin-url]: https://linkedin.com/in/linkedin\_username
-
-\[product-screenshot]: images/screenshot.png
-
-<!-- Shields.io badges. You can a comprehensive list with many more badges at: https://github.com/inttter/md-badges -->
-
-\[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge\&logo=nextdotjs\&logoColor=white
-
-\[Next-url]: https://nextjs.org/
-
-\[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge\&logo=react\&logoColor=61DAFB
-
-\[React-url]: https://reactjs.org/
-
-\[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge\&logo=vuedotjs\&logoColor=4FC08D
-
-\[Vue-url]: https://vuejs.org/
-
-\[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge\&logo=angular\&logoColor=white
-
-\[Angular-url]: https://angular.io/
-
-\[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge\&logo=svelte\&logoColor=FF3E00
-
-\[Svelte-url]: https://svelte.dev/
-
-\[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge\&logo=laravel\&logoColor=white
-
-\[Laravel-url]: https://laravel.com
-
-\[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge\&logo=bootstrap\&logoColor=white
-
-\[Bootstrap-url]: https://getbootstrap.com
-
-\[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge\&logo=jquery\&logoColor=white
-
-\[JQuery-url]: https://jquery.com 
-
+[]: #
+[contributors-url]: https://www.google.com/search?q=https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/graphs/contributors
+[]: #
+[forks-url]: https://www.google.com/search?q=https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/network/members
+[]: #
+[stars-url]: https://www.google.com/search?q=https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/stargazers
+[]: #
+[issues-url]: https://www.google.com/search?q=https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/issues
+[]: #
+[license-url]: https://www.google.com/search?q=https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/blob/master/LICENSE.txt
+[]: #
+[linkedin-url]: https://www.google.com/search?q=https://linkedin.com/in/YOUR_LINKEDIN
