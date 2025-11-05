@@ -31,6 +31,26 @@ Bonezegei_DHT11
 
 ## :thermometer: Usage and Calibration
 
+This is the most important part of the project.
+
+1. Temperature & Humidity
+
+The DHT11 sensor reads the ambient room temperature (in °C) and humidity (%).
+
+If the sensor is disconnected, the LCD will display DHT11 Error, but the rest of the system will continue to work.
+
+2. Soil Moisture (CRITICAL STEP)
+
+You MUST calibrate your sensor for accuracy:
+
+Upload the plant_monitor.ino code to your Arduino.
+
+Open the Arduino IDE's Serial Monitor (Tools > Serial Monitor) and set the baud rate to 115200.
+
+Find DRY Value: Hold the sensor in the open air. Note the "Soil Raw" value from the Serial Monitor. This is your DRY_VALUE.
+
+Find WET Value: Submerge the sensor's measurement part in a glass of water. Note the "Soil Raw" value. This is your WET_VALUE.
+
 ## Installation and Wirings
 
 |  Component | Pin | Connected to Arduino |
@@ -42,5 +62,13 @@ Bonezegei_DHT11
 |  Soil Sensor  |    AOUT   |     A0    |
 |               |    VCC    |     D8    |
 |               |    GND    |    GND    |
-
+|    DHT11      |    Data   |     A1    |
+|               |    VCC    |     5V    |
+|               |    GND    |    GND    |
+|    RGB LED    |    Red    |     D9    |
+|               |    Blue   |    D10    |
+|               |   Green   |    D11    |
+|               |   Cathode |    GND    |
+|   Buzzer      |Positive(+)|    D13    |
+|               |Negative(+)|   GND     |
 
