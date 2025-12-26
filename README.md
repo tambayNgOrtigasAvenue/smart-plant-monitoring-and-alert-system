@@ -21,6 +21,9 @@ Tri-Color LED (Common Anode) (Red, Green, Blue)
 
 Buzzer
 
+## :electric_plug: Circuit Diagram
+<img src="./spmswas-circuit-diagram.png" alt="circuit-diagram" height="400" width="300">
+
 ## :books: Libraries
 
 As the arduino and other components depends on these packages or libraries, we need to install and include these.
@@ -72,3 +75,30 @@ Find WET Value: Submerge the sensor's measurement part in a glass of water. Note
 |   Buzzer      |Positive(+)|    D13    |
 |               |Negative(+)|   GND     |
 
+## 🙏 Acknowledgements
+
+Special thanks to my members who made this project possible:
+
+### **Group 2 of SBIT-3H from Quezon City University**
+
+- **Lead Developer**
+    - [tambayNgOrtigasAvenue](https://github.com/tambayNgOrtigasAvenue)
+    - Allyana Cabiling (also in Documentation and QA)
+
+- **Documentation**
+    - Jan Sumido
+    - Jefferson Abarquez
+    - Nath Legaspina
+    - Alexandria Garcia
+    - Carl Sebastian
+
+
+### Websites and Tools
+
+- [TinkerCad](https://www.tinkercad.com/) - For Circuit Simulation
+- [ChatGPT](https://chatgpt.com/) - For Countless Code Suggestion
+- [Arduino](https://docs.arduino.cc/) - For an Access to Documentation and Software
+
+
+## Project Ouput
+<img src="./final-product.jpg" alt="project-image" width="400" height="300">
