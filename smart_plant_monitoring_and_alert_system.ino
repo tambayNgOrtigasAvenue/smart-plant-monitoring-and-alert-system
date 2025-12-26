@@ -1,40 +1,24 @@
-/*
-  Project: Smart Plant & Room Monitor (Refactored)
-  Description: Monitors temp, humidity, and soil moisture.
-  Uses a power-switching pin (D8) for the soil sensor to prevent corrosion.
-*/
-
-// --- Include Libraries ---
+#include <Bonezegei_DHT11.h>
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 #include <DHT.h>
 
-// --- Component Definitions ---
+LiquidCrystal_I2C lcd(0x27, 16, 2);
 
-// LCD (User Defined)
-LiquidCrystal_I2C lcd(0x27, 16, 2); // 16x2 I2C Display
-
-// RGB LED (User Defined: R=9, B=10, G=11)
 const int red_led = 9;   // PWM Pin
 const int blue_led = 10; // PWM Pin
 const int green_led = 11;  // PWM Pin
 
-// Buzzer (User Defined)
 const int buzzer_pin = 13;
 
-// Soil Sensor (User Defined)
-const int soil_pin_a = A0;      // Sensor Analog OUT
-const int soil_power_d = 8;       // Sensor VCC (power pin)
+const int soil_pin_a = A0;
+const int soil_power_d = 8;
 
-// DHT11 Sensor (User Defined)
-const int dht_pin_a = A1;       // Data pin (A1 can also be Digital 15)
+const int dht_pin_a = A1;
 #define DHTTYPE DHT11
 DHT dht(dht_pin_a, DHTTYPE);
 
-// --- Calibration & Thresholds (NEEDS TUNING) ---
-// You MUST calibrate these values for your sensor
-// Note: Capacitive sensors are often INVERTED (higher value = drier)
-const int DRY_VALUE = 590; // Raw value from analogRead() in open air
+const int DRY_VALUE = 590;
 const int WET_VALUE = 240; // Raw value from analogRead() in water
 
 // Define your alert thresholds in percentage
@@ -224,7 +208,6 @@ void updateDisplay(bool dhtConnected) {
   lcd.print(g_soil_percent);
   lcd.print("%)");
 }
-
 
 /**
  * @brief Sets the color of the RGB LED using analogWrite (PWM).
