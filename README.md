@@ -101,4 +101,4 @@ Special thanks to my members who made this project possible:
 
 
 ## Project Ouput
-<img src="./final-product.jpg" alt="project-image" width="400" height="300">
+<img src="./final-product.jpg" alt="project-image" width="auto" height="300">
